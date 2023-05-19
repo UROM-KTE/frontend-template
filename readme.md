@@ -49,7 +49,8 @@ After it add “airbnb-typescript” to the extends array in the .eslintrc.json 
 
 Now the array should be something similar to this:
    
-```"extends": [
+```
+"extends": [
     "airbnb",
     "airbnb/hooks",
     "airbnb-typescript",
