@@ -2,8 +2,10 @@ module.exports = {
   env: {
     browser: true,
     es2020: true,
+    jest: true,
   },
   extends: [
+    'prettier',
     'airbnb',
     'airbnb/hooks',
     'airbnb-typescript',
@@ -18,12 +20,31 @@ module.exports = {
     project: './tsconfig.json',
   },
   plugins: [
-    'react-refresh',
     'react',
+    'react-hooks',
+    'react-refresh',
     '@typescript-eslint',
+    'pretter',
   ],
   rules: {
     'react-refresh/only-export-components': 'warn',
-    'react/react-in-jsx-scope': 0,
+    'react/react-in-jsx-scope': 'off',
+    'camelcase': 'error',
+    'spaced-comment': 'error',
+    'quotes': [
+      'error',
+      'single',
+    ],
+    'no-duplicate-imports': 'error',
+    'no-console': 'warn',
+  },
+  settings: {
+    'import/resolver': {
+      'typescript': {},
+    },
+    'react': {
+      'pragma': 'React',
+      'version': 'detect',
+    }
   },
 };
