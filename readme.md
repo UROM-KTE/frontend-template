@@ -1,4 +1,4 @@
-# del-heves.hu webpage frontend project
+# Template for web application projects
 
 ## Used technologies
 
@@ -9,7 +9,64 @@
 - ESLint (AirBnB)
 - Prettier
 
-## Setup
+## Using the project
+
+After downloaded or used as template or checkout it, run ```npm install```.
+
+### Scripts
+
+Start developer mode. The application starts in developer mode on [http://localhost:5173/](http://localhost:5173/): `npm run dev`
+
+Preview of the application: ```npm run vite preview```
+
+Build the application: ```npm run build```
+
+Run the linter (ESLint): ```npm run lint```
+or with automatic fix: ```npm run lint:fix```
+
+#### Test runner scripts
+
+Run all the tests without watching: ```npm run test```
+Run all the test in watching mode: ```npm run test:watch```
+Run the vitest ui: ```npm run test:ui```
+Run the tests and display the coverage report: ```npm run test coverage```
+
+## Documentations
+
+### Vite
+[Getting Started | Vite](https://vitejs.dev/guide/)
+
+### ESLint
+[Documentation - ESLint - Pluggable JavaScript Linter](https://eslint.org/docs/latest/)
+
+### Prettier
+[What is Prettier? · Prettier](https://prettier.io/docs/en/index.html)
+
+### Jest
+[Getting Started · Jest](https://jestjs.io/docs/getting-started)
+
+### Testing Library
+[Introduction | Testing Library](https://testing-library.com/docs/)
+
+### Vitest
+[Getting Started | Guide | Vitest](https://vitest.dev/guide/)
+
+### Husky
+[Husky - Git hooks](https://typicode.github.io/husky/#/)
+
+### Storybook
+[Install Storybook](https://storybook.js.org/docs/7.0/react/get-started/install/)
+
+### Github Actions
+[GitHub Actions Documentation](https://docs.github.com/en/actions)
+
+## Sources
+
+[Build an app using React Redux with TypeScript using the Redux-Toolkit package | by Jodiss Tribhu | ITNEXT](https://itnext.io/build-a-react-redux-with-typescript-using-redux-toolkit-package-d17337aa6e39) (2023-03-29)
+[Create-React-App with TypeScript, ESLint, Prettier, and Github Actions | by Bryan Grill](https://brygrill.medium.com/create-react-app-with-typescript-eslint-prettier-and-github-actions-f3ce6a571c97) (2023-03-29)
+[Ensuring React Testing Library best practices with ESLint ](https://blog.sapegin.me/til/react/ensuring-react-testing-library-best-practices-with-eslint/)
+
+## How I build and set this template up
 
 ### Vite
 
@@ -62,6 +119,7 @@ Now the array should be something similar to this:
 In the tsconfig.json file, there is an include array. Add the “.eslintrc.cjs” file to this array.
 
 ### Prettier
+
 ```npm install eslint-plugin-import eslint-import-resolver-typescript prettier eslint-config-prettier eslint-plugin-prettier eslint-plugin-react-hooks --save-dev```
 ```touch .prettierrc```
 
@@ -179,61 +237,6 @@ After successful install update the .eslintrc.cjs:
    }
 }
 ```
-
-## Using the project
-
-### Scripts
-
-Start developer mode. The application starts in developer mode on [http://localhost:5173/](http://localhost:5173/): `npm run dev`
-
-Preview of the application: ```npm run vite preview```
-
-Build the application: ```npm run build```
-
-Run the linter (ESLint): ```npm run lint```
-or with automatic fix: ```npm run lint:fix```
-
-#### Test runner scripts
-
-Run all the tests without watching: ```npm run test```
-Run all the test in watching mode: ```npm run test:watch```
-Run the vitest ui: ```npm run test:ui```
-Run the tests and display the coverage report: ```npm run test coverage```
-
-## Documentations
-
-### Vite
-[Getting Started | Vite](https://vitejs.dev/guide/)
-
-### ESLint
-[Documentation - ESLint - Pluggable JavaScript Linter](https://eslint.org/docs/latest/)
-
-### Prettier
-[What is Prettier? · Prettier](https://prettier.io/docs/en/index.html)
-
-### Jest
-[Getting Started · Jest](https://jestjs.io/docs/getting-started)
-
-### Testing Library
-[Introduction | Testing Library](https://testing-library.com/docs/)
-
-### Vitest
-[Getting Started | Guide | Vitest](https://vitest.dev/guide/)
-
-### Husky
-[Husky - Git hooks](https://typicode.github.io/husky/#/)
-
-### Storybook
-[Install Storybook](https://storybook.js.org/docs/7.0/react/get-started/install/)
-
-### Github Actions
-[GitHub Actions Documentation](https://docs.github.com/en/actions)
-
-## Sources
-
-[Build an app using React Redux with TypeScript using the Redux-Toolkit package | by Jodiss Tribhu | ITNEXT](https://itnext.io/build-a-react-redux-with-typescript-using-redux-toolkit-package-d17337aa6e39) (2023-03-29)
-[Create-React-App with TypeScript, ESLint, Prettier, and Github Actions | by Bryan Grill](https://brygrill.medium.com/create-react-app-with-typescript-eslint-prettier-and-github-actions-f3ce6a571c97) (2023-03-29)
-[Ensuring React Testing Library best practices with ESLint ](https://blog.sapegin.me/til/react/ensuring-react-testing-library-best-practices-with-eslint/)
 
 ## Licenses of the components
 
