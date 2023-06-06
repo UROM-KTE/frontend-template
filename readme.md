@@ -25,23 +25,23 @@ npx eslint --init
 
 Select the following items:
 1. How would you like to use ESLint?
-- To check syntax and find problems
+   - To check syntax and find problems
 2. What type of modules does your project use?
-- Javascript modules (import/export)
+   - Javascript modules (import/export)
 3. Which framework does your project use?
-- React
+   - React
 4. Does your project use TypeScript?
-- Yes
+   - Yes
 5. Where does your code run?
-- Browser
+   - Browser
 6. What format do you want your config file to be in?
-- JSON
+   - JSON
 7. The config that you've selected requires the following dependencies:
-- eslint-plugin-react@latest @typescript-eslint/eslint-plugin@latest typescript-eslint/parser@latest
+   - eslint-plugin-react@latest @typescript-eslint/eslint-plugin@latest typescript-eslint/parser@latest
 8. Would you like to install them now?
-- Yes
+   - Yes
 9. Which package manager do you want to use?
-- npm
+   - npm
 
 ```
 npx install-peerdeps --dev eslint-config-airbnb
@@ -97,7 +97,7 @@ and the main part is the rule section. My rules are these ones:
 },
 ```
 
-You can find documentation about the ESLint rules here.
+You can find documentation about the ESLint [rules](https://eslint.org/docs/latest/rules/) here.
 
 Also need to update the plugins array to use installed plugins:
 ```
@@ -137,4 +137,35 @@ You should also add rules to the .prettierrc file. My settings are:
 }
 ```
 
-If you want more I suggest you their options page.
+If you want more I suggest you their [options](https://prettier.io/docs/en/options.html) page.
+
+## Documentations
+
+### Vite
+[Getting Started | Vite](https://vitejs.dev/guide/)
+
+### ESLint
+[Documentation - ESLint - Pluggable JavaScript Linter](https://eslint.org/docs/latest/)
+
+### Prettier
+[What is Prettier? · Prettier](https://prettier.io/docs/en/index.html)
+
+### Jest
+[Getting Started · Jest](https://jestjs.io/docs/getting-started)
+
+### Testing Library
+[Introduction | Testing Library](https://testing-library.com/docs/)
+
+### Husky
+[Husky - Git hooks](https://typicode.github.io/husky/#/)
+
+### Storybook
+[Install Storybook](https://storybook.js.org/docs/7.0/react/get-started/install/)
+
+### Github Actions
+[GitHub Actions Documentation](https://docs.github.com/en/actions)
+
+## Sources
+
+[Build an app using React Redux with TypeScript using the Redux-Toolkit package | by Jodiss Tribhu | ITNEXT](https://itnext.io/build-a-react-redux-with-typescript-using-redux-toolkit-package-d17337aa6e39) (2023-03-29)
+[Create-React-App with TypeScript, ESLint, Prettier, and Github Actions | by Bryan Grill](https://brygrill.medium.com/create-react-app-with-typescript-eslint-prettier-and-github-actions-f3ce6a571c97) (2023-03-29)
