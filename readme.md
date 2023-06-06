@@ -8,6 +8,7 @@
 - SWC
 - ESLint (AirBnB)
 - Prettier
+- Husky
 
 ## Using the project
 
@@ -246,6 +247,18 @@ After successful install update the .eslintrc.cjs:
       "testing-library/prefer-wait-for": "error"
    }
 }
+```
+
+### Pre-commit hook with Husky
+
+To install and init husky you should enter this command:
+```npx husky-init && npm install```
+
+It creates a basic pre-commit hook in the .husky folder. You should update with the scripts we created in the package.json file. Instead of the npm test add these lines to the pre-commit file:
+```
+npm run format
+npm run lint:fix
+npm run test:coverage
 ```
 
 ## Licenses of the components
