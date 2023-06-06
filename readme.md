@@ -157,6 +157,29 @@ test: {
 ```
 Feel free to adjust for yourself by the [config documentation](https://vitest.dev/config/).
 
+#### Linter in tests
+
+```npm install --save-dev eslint-plugin-testing-library eslint-plugin-jest-dom```
+
+After successful install update the .eslintrc.cjs:
+```
+{
+   "extends": [
+   "plugin:testing-library/react",
+   "plugin:jest-dom/recommended"
+   ],
+   "plugins": ["testing-library", "jest-dom"],
+   "rules": {
+      "testing-library/no-render-in-setup": "error",
+      "testing-library/no-wait-for-empty-callback": "error",
+      "testing-library/prefer-explicit-assert": "error",
+      "testing-library/prefer-presence-queries": "error",
+      "testing-library/prefer-screen-queries": "error",
+      "testing-library/prefer-wait-for": "error"
+   }
+}
+```
+
 ## Using the project
 
 ### Scripts
@@ -210,6 +233,7 @@ Run the tests and display the coverage report: ```npm run test coverage```
 
 [Build an app using React Redux with TypeScript using the Redux-Toolkit package | by Jodiss Tribhu | ITNEXT](https://itnext.io/build-a-react-redux-with-typescript-using-redux-toolkit-package-d17337aa6e39) (2023-03-29)
 [Create-React-App with TypeScript, ESLint, Prettier, and Github Actions | by Bryan Grill](https://brygrill.medium.com/create-react-app-with-typescript-eslint-prettier-and-github-actions-f3ce6a571c97) (2023-03-29)
+[Ensuring React Testing Library best practices with ESLint ](https://blog.sapegin.me/til/react/ensuring-react-testing-library-best-practices-with-eslint/)
 
 ## Licenses of the components
 

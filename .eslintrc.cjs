@@ -11,6 +11,8 @@ module.exports = {
     'airbnb-typescript',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:testing-library/react',
+    'plugin:jest-dom/recommended'
   ],
   overrides: [],
   parser: '@typescript-eslint/parser',
@@ -25,6 +27,8 @@ module.exports = {
     'react-refresh',
     '@typescript-eslint',
     'prettier',
+    'testing-library',
+    'jest-dom',
   ],
   rules: {
     'react-refresh/only-export-components': 'warn',
@@ -37,6 +41,12 @@ module.exports = {
     ],
     'no-duplicate-imports': 'error',
     'no-console': 'warn',
+    'testing-library/no-render-in-setup': 'error',
+    'testing-library/no-wait-for-empty-callback': 'error',
+    'testing-library/prefer-explicit-assert': 'error',
+    'testing-library/prefer-presence-queries': 'error',
+    'testing-library/prefer-screen-queries': 'error',
+    'testing-library/prefer-wait-for': 'error',
   },
   settings: {
     'import/resolver': {
