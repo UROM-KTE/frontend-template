@@ -15,12 +15,15 @@ After downloaded or used as template or checkout it, run ```npm install```.
 
 ### Scripts
 
+#### Development and build
+
 Start developer mode. The application starts in developer mode on [http://localhost:5173/](http://localhost:5173/): `npm run dev`
-
 Preview of the application: ```npm run vite preview```
-
 Build the application: ```npm run build```
 
+#### Formatting and linting
+
+Run the prettier code formatter: ```npm run format```
 Run the linter (ESLint): ```npm run lint```
 or with automatic fix: ```npm run lint:fix```
 
@@ -186,13 +189,20 @@ You should also add rules to the .prettierrc file. My settings are:
 
 If you want more I suggest you their [options](https://prettier.io/docs/en/options.html) page.
 
+You should create two files in the root folder to ignore unnecessary files and folders for prettier and eslint:
+
+.prettierignore and .eslintignore
+
+Add at least the following line to both of them:
+```node_modules/```
+
 ### Testing
 
 For React, it is recommended to install React Testing Library. You can do it with this command:
 ```npm install @testing-library/react @testing-library/jest-dom --save-dev```
 
 For Vitest run the following command:
-```npm install vitest @vitest/coverage-c8 @vitest/ui jsdom --save-dev```
+```npm install vitest @vitest/coverage-v8 @vitest/ui jsdom --save-dev```
 
 In the vite.config.ts you should add a test object, similar to this one:
 ```
@@ -203,7 +213,7 @@ test: {
    '**/{vite,vitest,jest,build}.config.*',
    ],
    coverage: {
-      provider: 'c8',
+      provider: 'v8',
       watermarks: {
          lines: [70,90],
          functions: [70,90],

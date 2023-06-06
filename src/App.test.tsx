@@ -6,6 +6,6 @@ describe('Test to test testing', () => {
   test('App renders title', () => {
     render(<App />);
     const title = screen.getByRole('heading', { level: 1 });
-    expect(title.textContent).toEqual('Dél-Heves');
+    expect(title).toHaveTextContent('Dél-Heves');
   });
 });
