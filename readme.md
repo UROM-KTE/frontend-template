@@ -1,4 +1,4 @@
-# Template for web application projects
+# Template for web application projects in DHTE (dhte-frontend-template)
 
 ## Used technologies
 
