@@ -176,7 +176,7 @@ You should also add rules to the .prettierrc file. My settings are:
 ```
 {
    "semi": true,
-   "tabWidth": 4,
+   "tabWidth": 2,
    "printWidth": 120,
    "singleQuote": true,
    "trailingComma": "all",
