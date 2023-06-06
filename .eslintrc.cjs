@@ -24,7 +24,7 @@ module.exports = {
     'react-hooks',
     'react-refresh',
     '@typescript-eslint',
-    'pretter',
+    'prettier',
   ],
   rules: {
     'react-refresh/only-export-components': 'warn',

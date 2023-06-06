@@ -2,26 +2,22 @@
 
 ## Used technologies
 
-- vite
+- Vite
 - React
-- typescript
-- swc
-- eslint (airbnb)
-- prettier
+- TypeScript
+- SWC
+- ESLint (AirBnB)
+- Prettier
 
 ## Setup
 
 ### Vite
 
-```
-npm create vite@latest
-```
+```npm create vite@latest```
 
 ### ESLint, ESLint-AirBnB, Prettier config
 
-```
-npx eslint --init
-```
+```npx eslint --init```
 
 Select the following items:
 1. How would you like to use ESLint?
@@ -43,38 +39,31 @@ Select the following items:
 9. Which package manager do you want to use?
    - npm
 
-```
-npx install-peerdeps --dev eslint-config-airbnb
-```
+```npx install-peerdeps --dev eslint-config-airbnb```
 
 In the .eslintrc.json file remove “eslint:recommended” from the extends array, and add “airbnb” and “airbnb/hooks”.
 
-```
-npm install eslint-config-airbnb-typescript
-```
+```npm install eslint-config-airbnb-typescript```
 
 After it add “airbnb-typescript” to the extends array in the .eslintrc.json file.
 
 Now the array should be something similar to this:
    
 ```
-"extends": [
-    "airbnb",
-    "airbnb/hooks",
-    "airbnb-typescript",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended"
-],
+"extends":
+   [
+      "airbnb",
+      "airbnb/hooks",
+      "airbnb-typescript",
+      "plugin:react/recommended",
+      "plugin:@typescript-eslint/recommended"
+   ],
 ```
 In the tsconfig.json file, there is an include array. Add the “.eslintrc.cjs” file to this array.
 
 ### Prettier
-```
-npm install eslint-plugin-import eslint-import-resolver-typescript prettier eslint-config-prettier eslint-plugin-prettier eslint-plugin-react-hooks --save-dev`
-```
-```
-touch .prettierrc`
-```
+```npm install eslint-plugin-import eslint-import-resolver-typescript prettier eslint-config-prettier eslint-plugin-prettier eslint-plugin-react-hooks --save-dev```
+```touch .prettierrc```
 
 Add this line to the eslintrc.cjs into the env section...:
 jest: true
@@ -139,6 +128,55 @@ You should also add rules to the .prettierrc file. My settings are:
 
 If you want more I suggest you their [options](https://prettier.io/docs/en/options.html) page.
 
+### Testing
+
+For React, it is recommended to install React Testing Library. You can do it with this command:
+```npm install @testing-library/react @testing-library/jest-dom --save-dev```
+
+For Vitest run the following command:
+```npm install vitest @vitest/coverage-c8 @vitest/ui jsdom --save-dev```
+
+In the vite.config.ts you should add a test object, similar to this one:
+```
+test: {
+   exclude: [
+   '**/{public,node_modules}/**',
+   '**/.{idea,git,cache,output,temp,github,coverage}/**',
+   '**/{vite,vitest,jest,build}.config.*',
+   ],
+   coverage: {
+      provider: 'c8',
+      watermarks: {
+         lines: [70,90],
+         functions: [70,90],
+         branches: [70,90],
+         statements: [70,90],
+      },
+   },
+},
+```
+Feel free to adjust for yourself by the [config documentation](https://vitest.dev/config/).
+
+## Using the project
+
+### Scripts
+
+Start developer mode. The application starts in developer mode on [http://localhost:5173/](http://localhost:5173/): `npm run dev`
+
+Preview of the application: ```npm run vite preview```
+
+Build the application: ```npm run build```
+
+Run the linter (ESLint): ```npm run lint```
+or with automatic fix: ```npm run lint:fix```
+
+#### Test runner scripts
+
+Run all the tests without watching: ```npm run test```
+Run all the test in watching mode: ```npm run test:watch```
+Run the vitest ui: ```npm run test:ui```
+Run the tests and display the coverage report: ```npm run test coverage```
+
 ## Documentations
 
 ### Vite
@@ -156,6 +194,9 @@ If you want more I suggest you their [options](https://prettier.io/docs/en/optio
 ### Testing Library
 [Introduction | Testing Library](https://testing-library.com/docs/)
 
+### Vitest
+[Getting Started | Guide | Vitest](https://vitest.dev/guide/)
+
 ### Husky
 [Husky - Git hooks](https://typicode.github.io/husky/#/)
 
@@ -169,3 +210,10 @@ If you want more I suggest you their [options](https://prettier.io/docs/en/optio
 
 [Build an app using React Redux with TypeScript using the Redux-Toolkit package | by Jodiss Tribhu | ITNEXT](https://itnext.io/build-a-react-redux-with-typescript-using-redux-toolkit-package-d17337aa6e39) (2023-03-29)
 [Create-React-App with TypeScript, ESLint, Prettier, and Github Actions | by Bryan Grill](https://brygrill.medium.com/create-react-app-with-typescript-eslint-prettier-and-github-actions-f3ce6a571c97) (2023-03-29)
+
+## Licenses of the components
+
+### Favicon
+[![The favicon of the website](/public/favicon.ico)](https://icon-icons.com/icon/bird-feather-social-twitter/127134)
+
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)

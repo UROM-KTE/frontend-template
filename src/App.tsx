@@ -1,8 +1,8 @@
 function App() {
   return (
-    <div>
-      Del-Heves
-    </div>
+    <h1>
+      Dél-Heves
+    </h1>
   );
 }
 
