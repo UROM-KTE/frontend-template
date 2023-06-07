@@ -9,6 +9,7 @@
 - ESLint (AirBnB)
 - Prettier
 - Husky
+- Storybook
 
 ## Using the project
 
@@ -260,6 +261,25 @@ npm run format
 npm run lint:fix
 npm run test:coverage
 ```
+### React Router
+
+You can install with npm:
+```npm install react-router-dom```
+
+### Storybook
+
+Enter the following command:
+```npx storybook@latest init```
+
+Answer the following questions:
+We have detected that you're using ESLint. Storybook provides a plugin that gives the best experience with Storybook and helps follow best practices: https://github.com/storybookjs/eslint-plugin-storybook#readme
+Would you like to intall it?							yes
+
+
+After init process finished create a .eslintignore and a .prettierignore file and add this line to both of them:
+```.storybook/```
+
+You can delete the generated stories folder generated in your src folder.
 
 ## Licenses of the components
 
