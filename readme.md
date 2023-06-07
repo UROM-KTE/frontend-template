@@ -281,6 +281,37 @@ After init process finished create a .eslintignore and a .prettierignore file an
 
 You can delete the generated stories folder generated in your src folder.
 
+### SCSS
+
+```npm install sass --save-dev```
+
+### TypeScript CSS Modules plugin
+
+```npm install typescript-plugin-css-modules --save-dev```
+
+Create a Global.d.ts file in your src folder with the following content:
+declare module '*.module.css';
+declare module '*.module.scss';
+(You can add your flavour of css, you want to use).
+
+In the tsconfig.json file add the following property to the CompilerOptions object:
+"plugins": [
+{ "name": "typescript-plugin-css-modules" }
+]
+
+Add the css file to your component’s folder with the name: <component>.module.css
+
+   In your component import it like this:
+   import styles from ’./Component.module.css’;
+   And use like this:
+   <div className={styles.divClassNameInCss}></div>
+   or like this:
+   <div className={styles[‘divClassNameInCss’]}></div>
+
+   For more information, read the documentation:
+   typescript-plugin-css-modules - npm
+
+
 ## Licenses of the components
 
 ### Favicon
