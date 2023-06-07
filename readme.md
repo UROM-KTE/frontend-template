@@ -14,6 +14,14 @@
 ## Using the project
 
 After downloaded or used as template or checkout it, run ```npm install```.
+To check outdated dependencies, you should use the following command: ```npm outdated```
+To update dependencies run ```npm update```
+
+Dangerous, but you can update to the next major version all the dependencies with the following way:
+1. Make a backup of your current `package.json` file.
+2. Install npm-check-updates: ```npm install -g npm-check-updates```
+3. Run ncu: ```ncu -u```
+4. Reinstall the project: ```npm install```
 
 ### Scripts
 
@@ -304,17 +312,17 @@ Add the css file to your component’s folder with the name: <component>.module.
    In your component import it like this:
    import styles from ’./Component.module.css’;
    And use like this:
-   <div className={styles.divClassNameInCss}></div>
+   ```<div className={styles.divClassNameInCss}></div>```
    or like this:
-   <div className={styles[‘divClassNameInCss’]}></div>
+   ```<div className={styles[‘divClassNameInCss’]}></div>```
 
    For more information, read the documentation:
    typescript-plugin-css-modules - npm
 
-
 ## Licenses of the components
 
 ### Favicon
+
 [![The favicon of the website](/public/favicon.ico)](https://icon-icons.com/icon/bird-feather-social-twitter/127134)
 
 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
