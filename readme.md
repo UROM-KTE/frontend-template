@@ -237,6 +237,8 @@ Feel free to adjust for yourself by the [config documentation](https://vitest.de
 
 #### Linter in tests
 
+```//TODO: We have to check the configuration based on this page``` [testing-library/eslint-plugin-testing-library](https://github.com/testing-library/eslint-plugin-testing-library) 
+
 ```npm install --save-dev eslint-plugin-testing-library eslint-plugin-jest-dom```
 
 After successful install update the .eslintrc.cjs:
