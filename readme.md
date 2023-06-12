@@ -321,6 +321,11 @@ Add the css file to your component’s folder with the name: <component>.module.
    For more information, read the documentation:
    typescript-plugin-css-modules - npm
 
+### Redux, Redux Toolkit
+
+Run the following command:
+```npm install react-redux @reduxjs/toolkit --save```
+
 ## Licenses of the components
 
 ### Favicon
