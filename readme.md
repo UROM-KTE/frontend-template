@@ -4,6 +4,7 @@
 
 - Vite
 - React
+- Redux, Redux Toolkit
 - TypeScript
 - SWC
 - ESLint (AirBnB)
