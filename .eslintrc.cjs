@@ -21,6 +21,13 @@ module.exports = {
     'quotes': ['error', 'single'],
     'no-duplicate-imports': 'error',
     'no-console': 'warn',
+    'max-len': [
+      'warn',
+        {
+          'code': 120,
+          'tabWidth': 2,
+        },
+      ],
     'testing-library/no-render-in-setup': 'error',
     'testing-library/no-wait-for-empty-callback': 'error',
     'testing-library/prefer-explicit-assert': 'error',
