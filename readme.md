@@ -73,6 +73,12 @@ Run the tests and display the coverage report: ```npm run test coverage```
 ### Github Actions
 [GitHub Actions Documentation](https://docs.github.com/en/actions)
 
+### Redux
+[Redux Homepage](https://redux.js.org/)
+
+### Redux Toolkit
+[Redux Toolkit documentation](https://redux-toolkit.js.org/)
+
 ## Sources
 
 [Build an app using React Redux with TypeScript using the Redux-Toolkit package | by Jodiss Tribhu | ITNEXT](https://itnext.io/build-a-react-redux-with-typescript-using-redux-toolkit-package-d17337aa6e39) (2023-03-29)
