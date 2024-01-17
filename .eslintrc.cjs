@@ -13,19 +13,9 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:testing-library/react',
     'plugin:jest-dom/recommended',
-    'plugin:storybook/recommended',
     'plugin:unicorn/recommended',
-    'plugin:promise/recommended',
   ],
   overrides: [
-    {
-      files: [ '*.js' ],
-      rules: {
-        // Allow CJS until ESM support improves
-        '@typescript-eslint/no-var-requires': 'off',
-        'unicorn/prefer-module': 'off'
-      },
-    },
     {
       files: [ '*.ts', '*.tsx' ],
       rules: {
@@ -55,8 +45,7 @@ module.exports = {
     'prettier',
     'testing-library',
     'jest-dom',
-    'unicorn',
-    'promise',
+    'unicorn'
   ],
   rules: {
     'react-refresh/only-export-components': 'warn',
@@ -97,12 +86,9 @@ module.exports = {
     'unicorn/prefer-spread': 'off',
     'unicorn/no-array-reduce': 'off',
     'unicorn/prefer-object-from-entries': 'off',
-    'testing-library/no-render-in-setup': 'error',
-    'testing-library/no-wait-for-empty-callback': 'error',
     'testing-library/prefer-explicit-assert': 'error',
     'testing-library/prefer-presence-queries': 'error',
     'testing-library/prefer-screen-queries': 'error',
-    'testing-library/prefer-wait-for': 'error',
   },
   settings: {
     'import/resolver': {
