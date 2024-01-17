@@ -13,36 +13,36 @@
 
 ## Using the project
 
-After downloaded or used as template or checkout it, run ```npm install```.
-To check outdated dependencies, you should use the following command: ```npm outdated```
-To update dependencies run ```npm update```
+After downloaded or used as template or checkout it, run ```pnpm install```.
+To check outdated dependencies, you should use the following command: ```pnpm outdated```
+To update dependencies run ```pnpm update```
 
 Dangerous, but you can update to the next major version all the dependencies with the following way:
 1. Make a backup of your current `package.json` file.
 2. Install npm-check-updates: ```npm install -g npm-check-updates```
 3. Run ncu: ```ncu -u```
-4. Reinstall the project: ```npm install```
+4. Reinstall the project: ```pnpm install```
 
 ### Scripts
 
 #### Development and build
 
-Start developer mode. The application starts in developer mode on [http://localhost:5173/](http://localhost:5173/): `npm run dev`
-Preview of the application: ```npm run vite preview```
-Build the application: ```npm run build```
+Start developer mode. The application starts in developer mode on [http://localhost:5173/](http://localhost:5173/): `pnpm run dev`
+Preview of the application: ```pnpm run vite preview```
+Build the application: ```pnpm run build```
 
 #### Formatting and linting
 
-Run the prettier code formatter: ```npm run format```
-Run the linter (ESLint): ```npm run lint```
-or with automatic fix: ```npm run lint:fix```
+Run the prettier code formatter: ```pnpm run format```
+Run the linter (ESLint): ```pnpm run lint```
+or with automatic fix: ```pnpm run lint:fix```
 
 #### Test runner scripts
 
-Run all the tests without watching: ```npm run test```
-Run all the test in watching mode: ```npm run test:watch```
-Run the vitest ui: ```npm run test:ui```
-Run the tests and display the coverage report: ```npm run test coverage```
+Run all the tests without watching: ```pnpm run test```
+Run all the test in watching mode: ```pnpm run test:watch```
+Run the vitest ui: ```pnpm run test:ui```
+Run the tests and display the coverage report: ```pnpm run test coverage```
 
 ## Documentations
 
@@ -82,7 +82,7 @@ Run the tests and display the coverage report: ```npm run test coverage```
 [Create-React-App with TypeScript, ESLint, Prettier, and Github Actions | by Bryan Grill](https://brygrill.medium.com/create-react-app-with-typescript-eslint-prettier-and-github-actions-f3ce6a571c97) (2023-03-29)
 [Ensuring React Testing Library best practices with ESLint ](https://blog.sapegin.me/til/react/ensuring-react-testing-library-best-practices-with-eslint/)
 
-## How I build and set this template up
+## How I built and set this template's first version up
 
 ### Vite
 
@@ -313,6 +313,18 @@ Add the css file to your component’s folder with the name: <component>.module.
 
 Run the following command:
 ```npm install react-redux @reduxjs/toolkit --save```
+
+
+### Switch to pnpm
+
+From v0.0.2 I use pnpm as package manager.
+
+I removed the node_modules folder and the package-lock.json file. The latter is not necessary, but this chanmge was part of a larger dependency upgrade so I didn't need it.
+
+I added the following to the package.json file's ```script``` section:
+   ```"preinstall": "npx only-allow pnpm"```
+
+Then I run the ```pnpm install``` command.
 
 ## Licenses of the components
 
