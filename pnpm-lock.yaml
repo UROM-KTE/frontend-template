@@ -101,7 +101,7 @@ devDependencies:
     specifier: ^23.2.0
     version: 23.2.0
   prettier:
-    specifier: ^3.2.2
+    specifier: ^3.2.3
     version: 3.2.3
   sass:
     specifier: ^1.69.7
